@@ -1,0 +1,246 @@
+
+/* font-family: 'PT Sans', sans-serif;
+font-family: 'PT Sans Caption', sans-serif; */
+
+body {
+   font-family: 'PT Sans', sans-serif;
+ }
+
+ body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-family: 'PT Sans', sans-serif;
+ }
+
+ a { color: inherit;
+ }
+
+ h1, h2, h3, h4, p, ul, blockquote, img {
+   width: 700px;
+   margin: 0 auto;
+ }
+
+ h1, h2, h3, h4 {
+   font-family: 'PT Sans Caption', sans-serif;
+   font-weight: bold;
+ }
+
+
+
+ h1 {
+   margin-top: 67px;
+   font-size: 38px;
+   line-height: 45px;
+ }
+
+ h1 + p { margin-top: 8px;
+   font-family: 'PT Sans Caption',
+   sans-serif;
+   font-size: 22px;
+   line-height: 32px;
+   color: rgba(0,0,0,.4);
+ }
+
+ h1 + p + p {
+   margin-top: 30px;
+ }
+
+ h2 {
+   margin-top: 43px;
+   font-size: 32px;
+   line-height: 36px;
+   color: rgba(0, 0, 0, .8);
+ }
+
+ h2 + p,
+ h2 + blockquote { margin-top: 7px;
+ }
+
+ h3 {
+   margin-top: 36px;
+   font-size: 28px;
+   line-height: 34px;
+   color: rgba(0, 0, 0, .8);
+ }
+
+ h3 + p,
+ h3 + blockquote {
+   margin-top: 6px;
+ }
+
+
+ h4 {
+   margin-top: 32px;
+   font-size: 22px;
+   line-height: 30px;
+   color: rgba(0, 0, 0, .8);
+ }
+
+ p, blockquote, li {
+   margin-top: 29px;
+   font-size: 20px;
+   line-height: 34px;
+ }
+
+ img {
+   display: block;
+   width: 1020px;
+   margin: 79px auto 0;
+ }
+
+ img + h2 {
+   margin-top: 79px;
+ }
+
+ img + p,
+ img + blockquote,
+ img + ul {
+   margin-top: 77px;
+ }
+
+ h2 + img {
+   margin-top: 82px;
+ }
+
+ h3 + img {
+   margin-top: 81px;
+ }
+
+
+/* Здесь заканчивается код Вадима */
+
+
+blockquote {
+  font-style: italic;
+  position: relative;
+  font-size: 22px;
+  line-height: 34px;
+  margin-top: 52px;
+  margin-bottom: 52px;
+/* Первый способ создания линии у цитаты: */
+  border-left: 3px black solid;
+  padding-left: 17px;
+  padding-right: 20px; /* Это чтобы компенсировать две предыдущие строки, из-за хорорых цитата съехала направо. Теперь текст цитаты выровнен относительно остального текста. */
+}
+
+
+/* Второй способ создания линии у цитаты: */
+/* blockquote::before {
+content: "";
+height: 100%;
+width: 3px;
+position: absolute;
+left: -20px;
+background: black;
+display: block;
+} */
+
+
+
+/* ????????????????????????? */
+/* Как быть с li????? Расстояние между li -- 40 px/
+А также набор буллитов обрамлён 52 px сверху и снизу*/
+li {
+  font-size: 22px;
+  line-height: 34px;
+  list-style-type: disc;
+}
+
+li + li {
+  margin-top: 40px;
+}
+
+.nav-pre {
+  display: none;
+}
+
+/* КАРТИНОЧЬКИ */
+img {
+display: block;
+/* Элемент заполняет собой всю ширину, справа и слева от него ничего поставить нельзя. */
+width: 900px;
+margin: 90px auto;
+}
+
+
+nav {
+  /* background: #999; */
+  width: 200px;
+  display: block;
+  position: fixed;
+  left: 20px;
+  top: 50px;
+  padding: 30px;
+  opacity: .1;
+  transition: all 1s ease;
+}
+
+nav:hover {
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 13px;
+  color: black;
+
+}
+
+nav ul ul li {
+  color: grey;
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
+nav > ul > li:first-child {
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* #ВДВ Как сделать список из двух уровней, с цифрами?! То, что ниже, не работает */
+nav ul ul li::before {
+  content: "1.";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 10px;
+}
+
+.class {}
+#id {}
+
+.menubar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.menubar img {
+  height: auto;
+  width: 200px;
+  margin: 0;
+}
+
+
+/* ?????? */
+/* Как сделать 80px в сааааамом низу? Задать последнему абзацу класс и поставить ему margin-bottom 80px?*/
